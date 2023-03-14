@@ -41,12 +41,12 @@ export const App = (elementId) => {
     todoListUL.addEventListener('click', (event) => {
         const element = event.target.closest('[data-id]');
         if (!element) return;
-        
-        if (!event.target.matches('button')) {
-            todoStore.toggleTodo(element.getAttribute('data-id'));
+
+        if (event.target.matches('button')) {
+            todoStore.deleteTodo(element.getAttribute('data-id'));
             displayTodos();
         } else {
-            todoStore.deleteTodo(element.getAttribute('data-id'));
+            todoStore.toggleTodo(element.getAttribute('data-id'));
             displayTodos();
         }
     });
