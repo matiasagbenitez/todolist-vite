@@ -44,6 +44,7 @@ body {
 .todoapp {
   background: #fff;
   margin: 130px 0 40px 0;
+  width: 600px;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
@@ -263,6 +264,8 @@ body {
   text-align: center;
   font-size: 15px;
   border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer:before {
@@ -292,7 +295,7 @@ body {
   padding: 0;
   list-style: none;
   position: absolute;
-  right: 0;
+  right: 30px;
   left: 0;
 }
 
@@ -315,6 +318,7 @@ body {
 
 .filters li a.selected {
   border-color: rgba(175, 47, 47, 0.2);
+  font-weight: 700;
 }
 
 .clear-completed,
